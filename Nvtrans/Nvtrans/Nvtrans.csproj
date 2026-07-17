@@ -49,13 +49,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIHelper.cs" />
+    <Compile Include="ImportMasterBankAccountField.cs" />
+    <Compile Include="ImportMasterStaffCert.cs" />
+    <Compile Include="ImportMasterPosition.cs" />
     <Compile Include="ImportMasterGraduation.cs" />
     <Compile Include="ImportMasterEducation.cs" />
     <Compile Include="ImportMasterStaffRelation.cs" />
+    <Compile Include="MainMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ImportStaff.cs" />
     <Compile Include="ImportStaffCert.cs" />
+    <Compile Include="ShipMapping.cs" />
     <Compile Include="SqlDb.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -23,63 +23,53 @@ namespace Nvtrans
             Console.ReadLine();
         }
 
+
+        static void ImportMasterData()
+        {
+            MainMethod.ImportStaffBankFields();
+            MainMethod.ImportStaffPosition();
+            MainMethod.ImportStaffGraduation();
+            MainMethod.ImportStaffRelation();
+            MainMethod.ImportMasterStaffCert();
+        }
+
         static void Run()
         {
-            //Import Staff Relation
-            //ImportMasterStaffRelation relationApiService = new ImportMasterStaffRelation();
-            //relationApiService.InsertOrUpdate();
+            //Master data Method
+            //ImportMasterData();
+
+            //Main Method
+            //MainMethod.ImportStaffInfo();
+            MainMethod.ImportStaffCert();
 
 
 
+            //string filePath =
+            //@"C:\Users\Docker\Desktop\trongnguyen\gpms-import-nvtrans\Nvtrans\Nvtrans\data_yaml\ship_mapping.yaml";
 
-            //Import Education
-            //ImportMasterEducationApiService educationApiService = new ImportMasterEducationApiService();
+            //ShipMappingRepository repository =
+            //    new ShipMappingRepository(filePath);
 
-            //List<JObject> educationList = educationApiService.GetAllDataAsync().GetAwaiter().GetResult();
-            //ImportMasterEducation importer = new ImportMasterEducation();
+            //string sourceId = "5ea942d7-dde8-4c37-bc94-6df2b288bab4";
 
-            //int count = 0;
+            //ShipMapping mapping = repository.GetById(sourceId);
 
-            //foreach (JObject education in educationList)
+            //if (mapping == null)
             //{
-            //    importer.InsertOrUpdate(education);
-            //    count++;
+            //    Console.WriteLine("ID was not found.");
             //}
-
-
-
-
-
-            //Import Graduation
-            //ImportMasterGraduationApiSevice graduationApiService = new ImportMasterGraduationApiSevice();
-
-            //List<JObject> graduationList = graduationApiService.GetAllDataAsync().GetAwaiter().GetResult();
-            //ImportMasterGraduation importer = new ImportMasterGraduation();
-
-            //int count = 0;
-
-            //foreach (JObject graduation in graduationList)
+            //else
             //{
-            //    importer.InsertOrUpdate(graduation);
-            //    count++;
-            //}
+            //    Console.WriteLine("Name: " + mapping.OrgStructureName);
 
-
-
-
-
-            //Import Staff Info
-            //ImportStaffApiService staffApiService = new ImportStaffApiService();
-
-            //List<JObject> staffList = staffApiService.GetAllDataAsync().GetAwaiter().GetResult();
-            //ImportStaff importer = new ImportStaff();
-
-            //int count = 0;
-
-            //foreach (JObject staff in staffList)
-            //{
-            //    importer.InsertOrUpdate(staff);
-            //    count++;
+            //    if (mapping.MappingId.HasValue)
+            //    {
+            //        Console.WriteLine("Mapping ID: " + mapping.MappingId.Value);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("This object has no MappingId.");
+            //    }
             //}
         }
     }

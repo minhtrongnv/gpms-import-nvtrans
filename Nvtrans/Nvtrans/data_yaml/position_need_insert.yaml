@@ -1,0 +1,541 @@
+[
+  {
+    "ID": "48fc8764-6593-4044-8ca0-e0d32646d2cf",
+    "Code": "JOB00078",
+    "PositionOtherName": null,
+    "PositionNameEN": null,
+    "PositionName": "Nhân viên Kinh doanh Khai thác"
+  },
+  {
+    "ID": "d4b7e531-d064-45c8-acb7-13b0ef6c94e3",
+    "Code": "JOB00077",
+    "PositionOtherName": null,
+    "PositionNameEN": null,
+    "PositionName": "Nhân viên Giám sát An toàn"
+  },
+  {
+    "ID": "96b2857e-f20d-40b3-bffd-c46dfed4e1b3",
+    "Code": "JOB00076",
+    "PositionOtherName": null,
+    "PositionNameEN": "Driver",
+    "PositionName": "Nhân viên Lái Xe"
+  },
+  {
+    "ID": "53f0afe3-f823-489c-a209-b47ad074a28b",
+    "Code": "JOB074",
+    "PositionOtherName": null,
+    "PositionNameEN": "Crewing Department Staff",
+    "PositionName": "Nhân viên Phòng TV"
+  },
+  {
+    "ID": "9557184c-2117-4779-a1d6-6de1a1d1ad35",
+    "Code": "JOB072",
+    "PositionOtherName": null,
+    "PositionNameEN": "Manager",
+    "PositionName": "Trưởng phòng Thuyền Viên"
+  },
+  {
+    "ID": "edf3ed95-894b-46fb-8a4f-ed21653c4d56",
+    "Code": "JOB00075",
+    "PositionOtherName": "Training AB",
+    "PositionNameEN": "Training Able Seaman",
+    "PositionName": "Tập sự Thuỷ thủ AB"
+  },
+  {
+    "ID": "013b4d2f-acdd-477e-af2a-e85d00a0a24b",
+    "Code": "JOB029",
+    "PositionOtherName": "Oiler 1",
+    "PositionNameEN": "Oiler 1",
+    "PositionName": "Thợ máy 1"
+  },
+  {
+    "ID": "2a3c054f-ff7f-4c64-ba41-2bfa2c1a4782",
+    "Code": "JOB032",
+    "PositionOtherName": "AB1",
+    "PositionNameEN": "AB1",
+    "PositionName": "Thủy thủ 1"
+  },
+  {
+    "ID": "3552d779-1c4b-493b-9d4a-d7915bd65f87",
+    "Code": "JOB048",
+    "PositionOtherName": "E/O",
+    "PositionNameEN": "Engine Officer",
+    "PositionName": "Sỹ quan máy"
+  },
+  {
+    "ID": "e87060c1-a1ef-4d50-a3f8-d667d8126f21",
+    "Code": "JOB004",
+    "PositionOtherName": "C/O",
+    "PositionNameEN": "Chief Officer",
+    "PositionName": "Đại phó"
+  },
+  {
+    "ID": "3142b6b9-40de-45b5-a032-85fc6d2d8aec",
+    "Code": "JOB011",
+    "PositionOtherName": "C/E",
+    "PositionNameEN": "Chief Engineer",
+    "PositionName": "Máy trưởng"
+  },
+  {
+    "ID": "962eaeac-5d98-4b58-ada1-65de4145a123",
+    "Code": "JOB025",
+    "PositionOtherName": "MSM",
+    "PositionNameEN": "Messman",
+    "PositionName": "Phục vụ"
+  },
+  {
+    "ID": "87515751-1da9-4d7a-8587-5902fb47bb01",
+    "Code": "JOB049",
+    "PositionOtherName": "OS.E",
+    "PositionNameEN": "Ordinary Seafarer engine rating",
+    "PositionName": "Thợ máy OS"
+  },
+  {
+    "ID": "0a8ddb40-2a99-49ec-a7d3-5f7bfd9b6712",
+    "Code": "JOB028",
+    "PositionOtherName": "AB.E",
+    "PositionNameEN": "Able Seafarer Engine Rating",
+    "PositionName": "Thợ máy AB"
+  },
+  {
+    "ID": "3c066d28-c1f0-49e9-a558-0437691f142c",
+    "Code": "JOB033",
+    "PositionOtherName": "OS.D",
+    "PositionNameEN": "Ordinary Seafarer Deck Rating",
+    "PositionName": "Thủy thủ OS"
+  },
+  {
+    "ID": "9ebb87b3-3e5e-4ffe-956a-8df98e6fa19d",
+    "Code": "JOB031",
+    "PositionOtherName": "AB.D",
+    "PositionNameEN": "Able Seafarer Deck Rating",
+    "PositionName": "Thủy thủ AB"
+  },
+  {
+    "ID": "55ecbae4-88ea-43af-bc2d-ae69108a180f",
+    "Code": "JOB073",
+    "PositionOtherName": "Pumpman",
+    "PositionNameEN": "Pumpman",
+    "PositionName": "Thợ bơm "
+  },
+  {
+    "ID": "37d7cfe6-f8ac-4571-a771-2a89247e06cd",
+    "Code": "JOB027",
+    "PositionOtherName": "Elect.",
+    "PositionNameEN": "Electrician",
+    "PositionName": "Thợ điện"
+  },
+  {
+    "ID": "ae31ec24-670e-45f9-b954-c46461163d8d",
+    "Code": "JOB001",
+    "PositionOtherName": "Cook",
+    "PositionNameEN": "Chief Cook",
+    "PositionName": "Bếp trưởng"
+  },
+  {
+    "ID": "810a0042-e263-4c41-806c-2fdf9a4cc5a7",
+    "Code": "JOB026",
+    "PositionOtherName": "Fitter",
+    "PositionNameEN": "Fitter",
+    "PositionName": "Thợ cả"
+  },
+  {
+    "ID": "2d732c06-7f7c-4e2d-ac8e-f1950d9ae09d",
+    "Code": "JOB034",
+    "PositionOtherName": "Bosun",
+    "PositionNameEN": "Bosun",
+    "PositionName": "Thủy thủ trưởng"
+  },
+  {
+    "ID": "fff970e7-0b56-4fbe-a0ef-46207119b2de",
+    "Code": "JOB047",
+    "PositionOtherName": "Elect/Off",
+    "PositionNameEN": "Electrician Eng.",
+    "PositionName": "Sỹ quan điện"
+  },
+  {
+    "ID": "81da68e4-be99-4468-ac08-13606505b517",
+    "Code": "JOB010",
+    "PositionOtherName": "4/E",
+    "PositionNameEN": "4th Engineer",
+    "PositionName": "Máy 4"
+  },
+  {
+    "ID": "6d72cec7-9245-4c7c-b3c2-f12db14c8acb",
+    "Code": "JOB018",
+    "PositionOtherName": "3/O",
+    "PositionNameEN": "3rd Officer",
+    "PositionName": "Phó 3"
+  },
+  {
+    "ID": "b967b6b6-74db-4fc8-a84d-120578aa9fb2",
+    "Code": "JOB017",
+    "PositionOtherName": "2/O",
+    "PositionNameEN": "2nd Officer",
+    "PositionName": "Phó 2"
+  },
+  {
+    "ID": "80c80a42-c2f9-45c3-83d9-af2653d9e427",
+    "Code": "JOB009",
+    "PositionOtherName": "3/E",
+    "PositionNameEN": "3rd Engineer",
+    "PositionName": "Máy 3"
+  },
+  {
+    "ID": "9e1a832d-753c-407c-bb9c-00e1168ba440",
+    "Code": "JOB008",
+    "PositionOtherName": "2/E",
+    "PositionNameEN": "2nd Engineer",
+    "PositionName": "Máy 2"
+  },
+  {
+    "ID": "a74e4480-90a5-4f4c-9c05-5bfc58b3b7d7",
+    "Code": "JOB035",
+    "PositionOtherName": "Master",
+    "PositionNameEN": "Master",
+    "PositionName": "Thuyền trưởng"
+  },
+  {
+    "ID": "0562664e-5d31-4f28-bfac-f869dfc7f2a1",
+    "Code": "JOB060_Intership",
+    "PositionOtherName": "Asst.D/O",
+    "PositionNameEN": "Asst. Officer",
+    "PositionName": "Thực tập Sỹ quan boong"
+  },
+  {
+    "ID": "8b4fcaa6-f755-4590-addf-53b71f8c5855",
+    "Code": "JOB036",
+    "PositionOtherName": "",
+    "PositionNameEN": "Asst.",
+    "PositionName": "Trợ lý Giám đốc"
+  },
+  {
+    "ID": "749ad325-eb9d-463e-91e8-a9532e71ee7b",
+    "Code": "JOB062_Intership",
+    "PositionOtherName": "Asst. E/O",
+    "PositionNameEN": "Asst. Engine Officer",
+    "PositionName": "Thực tập Sỹ quan máy"
+  },
+  {
+    "ID": "84dff078-7f61-416b-8ba8-f8e627cfb764",
+    "Code": "JOB00073",
+    "PositionOtherName": null,
+    "PositionNameEN": "GAS ENGINEER",
+    "PositionName": "Thợ gas lạnh "
+  },
+  {
+    "ID": "36759e94-85b7-4861-a211-c857f7a67fc7",
+    "Code": "JOB041",
+    "PositionOtherName": "D/O",
+    "PositionNameEN": "Deck Officer",
+    "PositionName": "Sỹ quan boong"
+  },
+  {
+    "ID": "e9fef099-7527-4780-b4a1-fd34e8baa44e",
+    "Code": "JOB00074",
+    "PositionOtherName": "GOC SINGAPORE",
+    "PositionNameEN": "GOC SINGAPORE",
+    "PositionName": "GCN Vô tuyến điện Singapore"
+  },
+  {
+    "ID": "079ad820-cb7b-4a04-9b57-fc795f7e72d6",
+    "Code": "JOB023",
+    "PositionOtherName": "",
+    "PositionNameEN": "Asst. Manager",
+    "PositionName": "Phó phòng HCNS"
+  },
+  {
+    "ID": "40ff122f-1098-491e-8d1e-f50d96dc3efd",
+    "Code": "JOB037",
+    "PositionOtherName": "",
+    "PositionNameEN": "Manager",
+    "PositionName": "Trưởng phòng ATPC"
+  },
+  {
+    "ID": "1433fbdf-d981-485d-a088-dbe5f7d37d82",
+    "Code": "JOB022",
+    "PositionOtherName": "",
+    "PositionNameEN": "Asst. Manager",
+    "PositionName": "Phó phòng phòng KD"
+  },
+  {
+    "ID": "2a6d2415-3a97-4183-b866-da531614535c",
+    "Code": "JOB071",
+    "PositionOtherName": "Asst. Cook",
+    "PositionNameEN": "Asst. Cook",
+    "PositionName": "Thực tập Bếp trưởng"
+  },
+  {
+    "ID": "93f20ab3-dc0e-4c42-b226-d718d26539e7",
+    "Code": "JOB007",
+    "PositionOtherName": "",
+    "PositionNameEN": "Driver",
+    "PositionName": "Lái xe"
+  },
+  {
+    "ID": "9cba35ee-2e41-42a0-aad5-d5495d40dede",
+    "Code": "JOB020",
+    "PositionOtherName": "",
+    "PositionNameEN": "Asst. Manager",
+    "PositionName": "Phó phòng KTVT"
+  },
+  {
+    "ID": "61870d6b-7b97-4e2a-9b9c-cc7736eeb17a",
+    "Code": "JOB038",
+    "PositionOtherName": "",
+    "PositionNameEN": "Manager",
+    "PositionName": "Trưởng phòng KTVT"
+  },
+  {
+    "ID": "138e1e3f-bc01-4faa-b357-cba57fd77f80",
+    "Code": "JOB070",
+    "PositionOtherName": null,
+    "PositionNameEN": null,
+    "PositionName": "Phó phòng ATPC"
+  },
+  {
+    "ID": "ab3b643d-d4d3-48e1-bcd1-c40971d2c84f",
+    "Code": "JOB061_Intership",
+    "PositionOtherName": "Asst. Elect/Off",
+    "PositionNameEN": "Asst. Electric Officer",
+    "PositionName": "Thực tập Sỹ quan điện"
+  },
+  {
+    "ID": "bc4a0dde-6621-4879-a72f-b78ecef6e7f5",
+    "Code": "JOB012",
+    "PositionOtherName": "",
+    "PositionNameEN": "Staff",
+    "PositionName": "Nhân viên phòng ATPC"
+  },
+  {
+    "ID": "626dae34-9a70-4c7d-940f-ac4f2d072ed6",
+    "Code": "JOB005",
+    "PositionOtherName": "",
+    "PositionNameEN": "Director",
+    "PositionName": "Giám đốc"
+  },
+  {
+    "ID": "607620fc-398d-43e2-998e-a30e5bfb9eed",
+    "Code": "00001",
+    "PositionOtherName": null,
+    "PositionNameEN": null,
+    "PositionName": "Nhân Viên - KTNB"
+  },
+  {
+    "ID": "cc88b555-f53c-44eb-ae40-9a3e54e04c4e",
+    "Code": "JOB021",
+    "PositionOtherName": "",
+    "PositionNameEN": "Asst. Manager",
+    "PositionName": "Phó phòng phòng KTVT"
+  },
+  {
+    "ID": "d525ce9f-0779-4715-a099-7dd549621dbb",
+    "Code": "JOB019",
+    "PositionOtherName": "",
+    "PositionNameEN": "Deputy Director",
+    "PositionName": "Phó Giám đốc"
+  },
+  {
+    "ID": "4de7c198-666a-4850-90ba-7cff0043eef5",
+    "Code": "JOB024",
+    "PositionOtherName": "",
+    "PositionNameEN": "Asst. Manager",
+    "PositionName": "Phó phòng TCKT"
+  },
+  {
+    "ID": "ae8e285c-9344-4eca-972f-7cea62a282c9",
+    "Code": "JOB015",
+    "PositionOtherName": "",
+    "PositionNameEN": "Staff",
+    "PositionName": "Nhân viên phòng TCKT"
+  },
+  {
+    "ID": "e80e7b59-944a-4cce-9297-7ae4daea384c",
+    "Code": "JOB065_Intership",
+    "PositionOtherName": "Asst. Fitter",
+    "PositionNameEN": "Asst. Fitter",
+    "PositionName": "Thực tập Thợ cả"
+  },
+  {
+    "ID": "6e97ec71-07e8-4dd7-b24b-785e03cfb7c7",
+    "Code": "JOB059_Intership",
+    "PositionOtherName": "Asst.3/O",
+    "PositionNameEN": "Asst. 3rd Officer",
+    "PositionName": "Thực tập Phó 3"
+  },
+  {
+    "ID": "eae7d2ec-dad3-42fd-a091-71a5b2e5aa9d",
+    "Code": "JOB066_Intership",
+    "PositionOtherName": "Asst. Bosun",
+    "PositionNameEN": "Asst. Bosun",
+    "PositionName": "Thực tập Thủy thủ Trưởng"
+  },
+  {
+    "ID": "0cc0ad2e-7fe5-426f-ad0b-70c7b1278a6d",
+    "Code": "JOB045",
+    "PositionOtherName": "D/Supdt",
+    "PositionNameEN": "D. Superintendent",
+    "PositionName": "Cán bộ KT boong"
+  },
+  {
+    "ID": "54815077-49c9-4515-9dc5-6db5317bf29f",
+    "Code": "JOB069",
+    "PositionOtherName": null,
+    "PositionNameEN": null,
+    "PositionName": "Nhân viên Văn Thư"
+  },
+  {
+    "ID": "eee6b46a-bb82-4157-8cfb-6ca83e7f4c4b",
+    "Code": "JOB057_Intership",
+    "PositionOtherName": "Asst.C/E",
+    "PositionNameEN": "Asst. Chief Engineer",
+    "PositionName": "Thực tập Máy trưởng"
+  },
+  {
+    "ID": "8935b0b0-ffaf-44ed-8eb5-5c78af0b5993",
+    "Code": "JOB013",
+    "PositionOtherName": "",
+    "PositionNameEN": "Staff",
+    "PositionName": "Nhân viên phòng KTVT"
+  },
+  {
+    "ID": "6cf04b17-8b19-4253-9977-5c0c8adfb43b",
+    "Code": "JOB016",
+    "PositionOtherName": "",
+    "PositionNameEN": "Staff",
+    "PositionName": "Nhân viên phòng KD"
+  },
+  {
+    "ID": "f555034e-f121-4001-9c4b-5b2c1b76e7e0",
+    "Code": "JOB052_Intership",
+    "PositionOtherName": "Asst. Electrician",
+    "PositionNameEN": "Asst. Electrician",
+    "PositionName": "Thực tập Thợ điện"
+  },
+  {
+    "ID": "21b4dc4d-9a53-4054-a1bc-560755159357",
+    "Code": "JOB040",
+    "PositionOtherName": "",
+    "PositionNameEN": "Manager",
+    "PositionName": "Trưởng phòng KD"
+  },
+  {
+    "ID": "dbda4cd0-812d-4b64-9151-5147825de77f",
+    "Code": "JOB054_Intership",
+    "PositionOtherName": "Asst.2/E",
+    "PositionNameEN": "Asst. 2nd Engineer",
+    "PositionName": "Thực tập Máy 2"
+  },
+  {
+    "ID": "265b4067-a617-4b58-a187-43314ec844b4",
+    "Code": "JOB046",
+    "PositionOtherName": "E/Supdt",
+    "PositionNameEN": "E. Superintendent",
+    "PositionName": "Cán bộ KT máy"
+  },
+  {
+    "ID": "dbbe18ed-3e5a-40cd-bc6c-3c8a3c7437d8",
+    "Code": "JOB043_Intership",
+    "PositionOtherName": "Asst. Master",
+    "PositionNameEN": "Asst. Master",
+    "PositionName": "Thực Tập Thuyền Trưởng"
+  },
+  {
+    "ID": "cc681e62-69e8-4c94-aedb-3106ba9e17fc",
+    "Code": "JOB039",
+    "PositionOtherName": "",
+    "PositionNameEN": "Manager",
+    "PositionName": "Trưởng phòng HCNS"
+  },
+  {
+    "ID": "d50de2af-9b21-445c-8e2d-259aff28a1f0",
+    "Code": "JOB014",
+    "PositionOtherName": "",
+    "PositionNameEN": "Staff",
+    "PositionName": "Nhân viên phòng HCNS"
+  },
+  {
+    "ID": "f6f56e14-aa33-425b-9bd5-2085a8340840",
+    "Code": "JOB058_Intership",
+    "PositionOtherName": "Asst.2/O",
+    "PositionNameEN": "Asst. 2nd Officer",
+    "PositionName": "Thực tập Phó 2"
+  },
+  {
+    "ID": "e1167e23-515c-4985-8b5a-1d0ab714fb56",
+    "Code": "JOB056_Intership",
+    "PositionOtherName": "Asst.4/E",
+    "PositionNameEN": "Asst. 4th Engineer",
+    "PositionName": "Thực tập Máy 4"
+  },
+  {
+    "ID": "19a722b5-75b3-4dd4-adcf-15435782700c",
+    "Code": "JOB055_Intership",
+    "PositionOtherName": "Asst.3/E",
+    "PositionNameEN": "Asst. 3rd Engineer",
+    "PositionName": "Thực tập Máy 3"
+  },
+  {
+    "ID": "5236346d-22ab-4a73-b959-152d1686c1ae",
+    "Code": "JOB002",
+    "PositionOtherName": "Supdt",
+    "PositionNameEN": "Superintendent",
+    "PositionName": "Cán bộ kỹ thuật"
+  },
+  {
+    "ID": "341da340-8a93-4073-b65c-15033f786136",
+    "Code": "JOB051_Intership",
+    "PositionOtherName": "Asst.C/O",
+    "PositionNameEN": "Asst. Chief Officer",
+    "PositionName": "Thực tập Đại phó"
+  },
+  {
+    "ID": "e8f74997-b158-4f1d-8018-07db324b422d",
+    "Code": "JOB006",
+    "PositionOtherName": "",
+    "PositionNameEN": "Chief Accountant",
+    "PositionName": "Kế toán Trưởng"
+  },
+  {
+    "ID": "ea86f618-dfc9-4c6b-980f-01e4287cc881",
+    "Code": "J00010",
+    "PositionOtherName": null,
+    "PositionNameEN": null,
+    "PositionName": "Trưởng phòng HCNS -TV"
+  },
+  {
+    "ID": "3669d3bd-a069-4a28-b102-43035ff59f0e",
+    "Code": "JOB064_Intership",
+    "PositionOtherName": "Training OS",
+    "PositionNameEN": "Training OS",
+    "PositionName": "Tập sự Thủy thủ OS"
+  },
+  {
+    "ID": "b97e5d37-4978-4f2c-85cf-9828f2f33607",
+    "Code": "JOB063_Intership",
+    "PositionOtherName": "Training Oiler",
+    "PositionNameEN": "Training Oiler",
+    "PositionName": "Tập sự Thợ máy OS"
+  },
+  {
+    "ID": "0887553f-b346-4f50-9bc8-a060d9db8b3b",
+    "Code": "JOB030",
+    "PositionOtherName": "",
+    "PositionNameEN": "Secretary",
+    "PositionName": "Thư ký HĐQT"
+  },
+  {
+    "ID": "f63e814b-d16d-4b6f-b16c-5e5474d906ec",
+    "Code": "JOB067",
+    "PositionOtherName": null,
+    "PositionNameEN": null,
+    "PositionName": "Thư ký KTVT"
+  },
+  {
+    "ID": "6419d157-0730-4c37-b795-3f8a86ca5de8",
+    "Code": "JOB068",
+    "PositionOtherName": null,
+    "PositionNameEN": null,
+    "PositionName": "Thủ quỹ"
+  }
+]

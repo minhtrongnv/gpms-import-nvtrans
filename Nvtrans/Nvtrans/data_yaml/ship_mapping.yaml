@@ -1,0 +1,497 @@
+[
+  {
+    "OrgStructureName": "MORNING DIANA",
+    "ID": "96b6b8e2-56a9-452b-9b9b-017e1cd234da",
+    "MappingId": "559E78F0-F972-4D78-8788-8B466DCB5183"
+  },
+  {
+    "OrgStructureName": "NV APOLLO",
+    "ID": "5361bad8-5dda-4b5f-b547-0c1419ebcfd9",
+    "MappingId": "627A8613-1357-47EB-A3CE-F888C4BE39CE"
+  },
+  {
+    "OrgStructureName": "ROSA",
+    "ID": "22643c12-84d0-433f-a60c-10c9b44244e7",
+    "MappingId": "8494A072-E90F-4D1F-90E9-0A37A0FB929E"
+  },
+  {
+    "OrgStructureName": "Nghỉ Việc",
+    "ID": "88c134ad-8153-4f0f-9d6f-12edbfc58fb4",
+    "MappingId": "00000000-0000-0000-0000-000000000003"
+  },
+  {
+    "OrgStructureName": "GOLDEN KEY",
+    "ID": "f85768e6-a5d1-44ca-be82-1cfe0f1ec462",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "NAVIS",
+    "ID": "21c82bc1-551e-402b-8afb-1ef5a1cd30e9",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "VMU SHIRAI",
+    "ID": "e69f5c86-fcde-48da-bc13-1f84dae2ae28",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "GEMINI",
+    "ID": "13e84e06-5f3d-4daf-9c40-25f0121fb40e",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "MORNING JANE",
+    "ID": "b82eb1b4-9e35-4d84-b387-275a33ab4d96",
+    "MappingId": "784A86CF-1F0B-4672-85D1-FC85FC7A5019"
+  },
+  {
+    "OrgStructureName": "LADY ROISE",
+    "ID": "a83c3a4e-c353-4af2-89f3-2a778337449f",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "HEREN",
+    "ID": "829cffaf-accf-4615-8fc0-23af1d23037d",
+    "MappingId": "CE5F279F-30AF-4929-9C6D-E6166D113877"
+  },
+  {
+    "OrgStructureName": "GOLDEN MARINE",
+    "ID": "a9ef58b8-bd6e-4d9e-bb9d-312e8a11e6cb",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Gas Texiana",
+    "ID": "a0b9e83e-119f-4056-989f-3ac48709d03b",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "TM-HAI HA PETRO",
+    "ID": "03ca50d4-40be-4d7e-873d-3ddcaf468d2d",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "GLOBAL LIBERTY",
+    "ID": "76ed69bb-d5b5-43a3-8a33-3e0d73cdbf95",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "IRIS",
+    "ID": "107d77a1-772a-41e8-8a7a-491f8168b711",
+    "MappingId": "8F54BEEB-81A7-4415-B7A9-A41726BDB368"
+  },
+  {
+    "OrgStructureName": "HERON",
+    "ID": "cfbe783f-cd89-4311-8e77-51a78629e08f",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "NV ATHENA",
+    "ID": "6bce23e0-b7e4-464d-b794-5afcf7f9ac82",
+    "MappingId": "5C9478FE-CFCA-4225-A880-1A1522BE9609"
+  },
+  {
+    "OrgStructureName": "Golden Sun",
+    "ID": "c72b498d-4af6-4cd8-bee1-657c63e478e9",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "LADY FELIZ",
+    "ID": "d1d34f84-5ae5-497b-85c3-66ec3ced9c99",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "VISPRING 3668",
+    "ID": "23253703-9ad8-4cc8-8780-6c0e5161d7e1",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "NV SUNSHINE",
+    "ID": "92863f01-f1d3-4817-bca7-70302f8360b2",
+    "MappingId": "591CAF1C-75EB-4BC4-B949-875316C2926C"
+  },
+  {
+    "OrgStructureName": "APOLLO OCEAN",
+    "ID": "5bc6c99b-3504-41ce-9676-71153e93689a",
+    "MappingId": "81092C7C-14B3-4D34-ABC9-2DB568B21975"
+  },
+  {
+    "OrgStructureName": "PACIFIC HOPE",
+    "ID": "1b32c5bb-a741-425f-86dc-79d31d85ab65",
+    "MappingId": "78E19DAB-82B2-4D02-B312-CDA3ECC0591D"
+  },
+  {
+    "OrgStructureName": "GOLDEN CENTURY",
+    "ID": "f05968f4-ca86-4e1c-b930-7c524709ef10",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "ELISA",
+    "ID": "1f6e53f1-c3d0-4af7-baa1-9774b9db0160",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "BULK ORIANNA ",
+    "ID": "eb5e7e15-4277-465e-84dd-992dc02291f4",
+    "MappingId": "8C92F3BC-D144-4789-89DE-4F7DD08EA61B"
+  },
+  {
+    "OrgStructureName": "NORD HAKATA",
+    "ID": "5d754e6d-d0f0-4cd1-bfcc-a0d87cdd3886",
+    "MappingId": "C54768B0-5D77-47BC-B165-C88AE9C2228B"
+  },
+  {
+    "OrgStructureName": "NV MINERVA",
+    "ID": "fe618df5-a590-4828-8ec9-a2141d759032",
+    "MappingId": "8704B0AF-47FD-4011-9908-BDC9055A602C"
+  },
+  {
+    "OrgStructureName": "GAS CATHAR",
+    "ID": "dfdcdb10-72d3-4b43-b3aa-a5025f617bda",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "GAS EVOLUZIONE",
+    "ID": "2857ba09-7dd9-44fe-a74f-92382ce21523",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "MORNING KATE",
+    "ID": "11321c83-f605-4c2a-a03a-b0f901b1ab67",
+    "MappingId": "141F79A0-1085-4EC4-A9C9-6A37A4C7F5C1"
+  },
+  {
+    "OrgStructureName": "Nghỉ Việc",
+    "ID": "47f9cacb-3135-4aa5-a5d7-c447608238cf",
+    "MappingId": "00000000-0000-0000-0000-000000000003"
+  },
+  {
+    "OrgStructureName": "HAI HA 88",
+    "ID": "05f23a82-115b-4765-ad5a-ceeee5e3b883",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "NAVIA",
+    "ID": "17af56e0-c490-48ee-b860-e4e86f3f2a8e",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "AMBER",
+    "ID": "85c3f789-8eba-41cf-a160-e7f9a711c43b",
+    "MappingId": "7DDA8C9E-3098-49A9-8450-EA5EC0866D4B"
+  },
+  {
+    "OrgStructureName": "FGAS/ASP",
+    "ID": "51811216-9a69-4350-9c32-eaabc084f3b1",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "NV AQUAMARINE",
+    "ID": "1c2e0b44-4d1b-4f50-8df9-f5b2952ba6cb",
+    "MappingId": "F8372B19-5E5E-42AA-AB5C-D1D862104168"
+  },
+  {
+    "OrgStructureName": "GOLDEN BRIGHT",
+    "ID": "ef695def-5cda-4b85-b6dd-fc3369cc417f",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "GAS LOTUS",
+    "ID": "7c1d2fd0-41ec-4d20-ad1d-c17d12144554",
+    "MappingId": "F4E06F63-9502-4E7E-A773-DCAED6457474"
+  },
+  {
+    "OrgStructureName": "TCT CP Vận tải Dầu Khí",
+    "ID": "75e70bef-214b-44c3-a07e-8ce2826f8267",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": " Hội Đồng Quản Trị",
+    "ID": "5ea942d7-dde8-4c37-bc94-6df2b288bab4",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Công ty Cổ phần Vận tải Nhật Việt",
+    "ID": "f45f1ece-3d76-4fa1-b0a7-3772e97acf6c",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Ban Giám đốc",
+    "ID": "5cf76ffa-e1ee-450a-b7a2-9572b6f9a996",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Ban Kiểm Soát",
+    "ID": "9d6bacdb-fdd4-4223-8c6b-388eb7a6dc66",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Phòng KTNB",
+    "ID": "2f6e4387-d580-4cd7-9a42-256894e2b2dc",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Phòng TCKT",
+    "ID": "2b5baf7a-293a-4b34-8de2-b6b0972eafa7",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Phòng HCNS",
+    "ID": "aebe23a4-c776-49c8-8349-91d446c88d37",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Phòng KTVT",
+    "ID": "22b081f5-7433-4f06-827f-3f952704779a",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Phòng ATPC",
+    "ID": "deeb2630-63c1-4318-a440-2d38ff05cee4",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Phòng Kinh Doanh",
+    "ID": "feda1a16-939c-42d0-868b-7f6031d3f26b",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Tàu Nhật Việt",
+    "ID": "226c4581-bed6-46ee-9484-ddc25aff3f8b",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Apollo Pacific",
+    "ID": "4dd27b7a-fb70-40d3-8025-f7d08aa03dac",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Aquamarine Gas",
+    "ID": "50426762-9f67-4449-86f7-775ceed6cdf0",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Phòng Thuyền Viên",
+    "ID": "728ed8fd-e8f5-4aa2-a7af-7cb35d7b3cff",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Gas Sellan",
+    "ID": "0304097b-ad46-426f-b98b-42f36e99ac19",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "OCEANUS 9",
+    "ID": "b3cd62bd-a64e-4254-a1e0-b7355e0db32f",
+    "MappingId": "92D16D4C-9919-4E5D-B647-A184F9F9C693"
+  },
+  {
+    "OrgStructureName": "Red Dragon",
+    "ID": "b01b2f3a-4091-479a-ac41-ce5932a87336",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "VIET GAS 01",
+    "ID": "62af9930-73a8-4e8a-b084-a9527ae495c9",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Alpha Gas",
+    "ID": "21d3cad9-0b4b-48de-8388-55a8733a36de",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Venus 08",
+    "ID": "26dcbd43-8076-4850-b918-f29a70d239b9",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "ANNIE GAS 09",
+    "ID": "98eb6049-88e1-4aec-9098-3bb33f576ae9",
+    "MappingId": "7DDA8C9E-3098-49A9-8450-EA5EC0866D4B"
+  },
+  {
+    "OrgStructureName": "OCEANUS 08",
+    "ID": "23a74322-872f-48e8-b490-873706ba30f7",
+    "MappingId": "08508FFC-1964-4345-B275-20BB7D07B655"
+  },
+  {
+    "OrgStructureName": "PVT -HN",
+    "ID": "569b4b2f-e543-436f-b976-36351d0120ed",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "VENUS GAS",
+    "ID": "71806e34-b98e-47ad-8302-6ae963635e71",
+    "MappingId": "59A64B7E-20E5-4C5E-B649-E0F6F47C13CF"
+  },
+  {
+    "OrgStructureName": "Gas Stellar",
+    "ID": "b062bddb-207c-4690-aed9-0f0753f42404",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Dự Trữ Nhật Việt",
+    "ID": "c351bcdb-e8db-4d94-9a4c-861504811b9b",
+    "MappingId": "00000000-0000-0000-0000-000000000005"
+  },
+  {
+    "OrgStructureName": "Dự Trữ Tàu Ngoài",
+    "ID": "6148e4f9-e3da-4eaa-83ad-82d01ce5e3ce",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Văn Phòng",
+    "ID": "b5203f6b-0b72-478c-8b89-94116ef1351c",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Vitamin Gas",
+    "ID": "da33d11a-5cec-45ae-ac35-7f1d5561c276",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Aroma",
+    "ID": "cea0ed89-524b-41cc-867e-875ae9be54af",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Tàu Quản Lý Ngoài",
+    "ID": "aa2e7431-d7ce-4dcc-a2f0-ef08d37f1470",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Epic 09",
+    "ID": "a71d90be-cbc7-413b-82f7-49e2de42921d",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Phòng DV QLT",
+    "ID": "5182dac2-9861-417f-9335-4af973371739",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Epic 08",
+    "ID": "272a52e7-f6fe-4dfa-bfe3-75e3dabfdac1",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "LADY FAVIA",
+    "ID": "28d86afc-b911-4b0a-b228-bd378392b923",
+    "MappingId": "AD7F27E7-AC7A-4010-BB08-D4CE29CF7DA4"
+  },
+  {
+    "OrgStructureName": "Petrogas 05",
+    "ID": "ddff0be3-9435-4ffe-8b14-cf58f828f7dd",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Cotswold",
+    "ID": "5d41abd9-b80f-4fd2-a583-673652a63e32",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Le Tong Patriot",
+    "ID": "6ccad67e-7ee5-4c24-b10d-b7037ac4cfb0",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Gas Eastern",
+    "ID": "61a68a58-0beb-407d-90b9-5241d0545a01",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "GAS EMPEROR",
+    "ID": "f93337da-ea38-4633-8187-c0a213ac6b2a",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "GAS ICON",
+    "ID": "760ee7e9-9e76-4ed6-b0f8-73493ac7ec57",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Kyoka Maru",
+    "ID": "12a728ad-f291-46a2-9d19-ddca46f1eb8e",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Lady Kathleen",
+    "ID": "73e2ef1a-d692-4ea4-ba96-fcb0e0063951",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "OPEC GAS",
+    "ID": "fa81a367-abdc-4ab9-b7e9-836d5b704d93",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Superintendent",
+    "ID": "2e6fb29f-5d55-4809-993e-30ead094f38f",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "LADY LINN",
+    "ID": "4676e5b6-8d84-4a65-919b-f7ba225f8212",
+    "MappingId": "F1FE8CAE-0C7B-4ECA-917F-02543EFAE422"
+  },
+  {
+    "OrgStructureName": "LADY VALENCIA",
+    "ID": "41ee1009-0b2c-4d1a-98a4-f0bae0347734",
+    "MappingId": "5E9F6890-C814-482C-B562-C6B12AE63CAF"
+  },
+  {
+    "OrgStructureName": "Golden Sea",
+    "ID": "5c768ce8-ea60-4cb4-8473-d35083225962",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "OPEC CAPRI",
+    "ID": "e3c1705c-0a7f-4a84-b348-7f26ec8b8179",
+    "MappingId": "DB6362DD-8B36-41EB-9036-85D334CB7C95"
+  },
+  {
+    "OrgStructureName": "Opec John",
+    "ID": "8613470d-53b2-45b3-9d56-8ded4c37374d",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Gas Nirvana",
+    "ID": "96ed6cf2-0dee-4933-9926-c65f95110e66",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Lady Roxana",
+    "ID": "0296c13d-76ef-4a33-9808-209a3295f7b2",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "LADY ROSALIA",
+    "ID": "5f1e6c02-e02b-4a2c-b628-692cec3e7f7a",
+    "MappingId": "4578731C-1784-4D21-B4A0-672393A5AA3E"
+  },
+  {
+    "OrgStructureName": "GAS EASTERN",
+    "ID": "bf8aac45-65f1-4403-b8a0-8f0060e0c94f",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Tàu dừng Quản lý",
+    "ID": "9aa9ad86-bfb9-4abf-b821-8c24f0ddcb4a",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "Lady Margaux",
+    "ID": "4021c786-dfd9-4bc5-87e5-17aebb7252c5",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "PCT/KPI",
+    "ID": "d3790e6b-4e96-4ac9-b369-7073d6ca1011",
+    "MappingId": false
+  },
+  {
+    "OrgStructureName": "PVT Sapphire",
+    "ID": "82f1ef90-8946-4de9-a77d-81773df448b9",
+    "MappingId": "27776B5F-C2CE-4E11-8FB9-8E6A10DAFCC5"
+  }
+]

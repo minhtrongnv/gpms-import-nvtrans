@@ -8,3 +8,13 @@ C:\Users\Docker\source\repos\Nvtrans\Nvtrans\obj\Debug\Nvtrans.pdb
 C:\Users\Docker\source\repos\Nvtrans\Nvtrans\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Docker\source\repos\Nvtrans\Nvtrans\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Docker\source\repos\Nvtrans\Nvtrans\obj\Debug\Nvtrans.csproj.CopyComplete
+C:\Users\Docker\Desktop\trongnguyen\gpms-import-nvtrans\Nvtrans\Nvtrans\obj\Debug\Nvtrans.csproj.AssemblyReference.cache
+C:\Users\Docker\Desktop\trongnguyen\gpms-import-nvtrans\Nvtrans\Nvtrans\obj\Debug\Nvtrans.csproj.CoreCompileInputs.cache
+C:\Users\Docker\Desktop\trongnguyen\gpms-import-nvtrans\Nvtrans\Nvtrans\obj\Debug\Nvtrans.exe
+C:\Users\Docker\Desktop\trongnguyen\gpms-import-nvtrans\Nvtrans\Nvtrans\obj\Debug\Nvtrans.pdb
+C:\Users\Docker\Desktop\trongnguyen\gpms-import-nvtrans\Nvtrans\Nvtrans\bin\Debug\Nvtrans.exe.config
+C:\Users\Docker\Desktop\trongnguyen\gpms-import-nvtrans\Nvtrans\Nvtrans\bin\Debug\Nvtrans.exe
+C:\Users\Docker\Desktop\trongnguyen\gpms-import-nvtrans\Nvtrans\Nvtrans\bin\Debug\Nvtrans.pdb
+C:\Users\Docker\Desktop\trongnguyen\gpms-import-nvtrans\Nvtrans\Nvtrans\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Docker\Desktop\trongnguyen\gpms-import-nvtrans\Nvtrans\Nvtrans\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Docker\Desktop\trongnguyen\gpms-import-nvtrans\Nvtrans\Nvtrans\obj\Debug\Nvtrans.csproj.CopyComplete

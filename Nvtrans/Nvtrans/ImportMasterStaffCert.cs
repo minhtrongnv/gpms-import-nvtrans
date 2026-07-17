@@ -7,49 +7,64 @@ using Newtonsoft.Json.Linq;
 
 namespace Nvtrans
 {
-    public class ImportMasterGraduation
+    public class ImportMasterStaffCert
     {
         private readonly SqlDb _db;
 
-        public ImportMasterGraduation()
+        public ImportMasterStaffCert()
         {
             _db = new SqlDb();
         }
 
-        public void InsertOrUpdate(JObject graduation)
+        public void InsertOrUpdate(JObject cert)
         {
-            string graduationId = GetString(graduation, "ID");
-            string code = GetString(graduation, "Code");
-            string fullName = GetString(graduation, "GraduationName");
+            string staffCertId = GetString(cert, "ID");
+            string code = GetString(cert, "Code");
+            string fullName = GetString(cert, "CertificateTypeName");
+            string alertLevel_1 = string.IsNullOrEmpty(GetString(cert, "DayExpireWarning")) ? "0" : GetString(cert, "DayExpireWarning");
+            string alertLevel_2 = string.IsNullOrEmpty(GetString(cert, "DayStopWarning")) ? "0": GetString(cert, "DayStopWarning");
 
             string sql = @"
-                IF EXISTS (SELECT 1 FROM dbo.EDUCATION_QUALIFICATIONS WHERE ID = @graduationId)
+                IF EXISTS (SELECT 1 FROM dbo.CERTIFICATE WHERE ID = @staffCertId)
                 BEGIN
-                    UPDATE dbo.EDUCATION_QUALIFICATIONS
+                    UPDATE dbo.CERTIFICATE
                     SET
-                        NUMBER = @Code,
+                        CODE = @Code,
                         NAME = @Name,
+                        ALERT_LEVEL1 = @AlertLevel1,
+                        ALERT_LEVEL2 = @AlertLevel2,
+                        BELONG_TO_SHIP = 0,
+                        DELETED = 0,
+                        NUMBER = '0',
                         LAST_UPDATE = GETDATE(),
                         CREATED_DATE = GETDATE()
-                    WHERE ID = @graduationId
+                    WHERE ID = @staffCertId
                 END
                 ELSE
                 BEGIN
-                    INSERT INTO dbo.EDUCATION_QUALIFICATIONS
+                    INSERT INTO dbo.CERTIFICATE
                     (
                         ID,
-                        NUMBER,
+                        CODE,
                         NAME,
+                        ALERT_LEVEL1,
+                        ALERT_LEVEL2,
+                        BELONG_TO_SHIP,
                         DELETED,
-                        CREATED_DATE,
-                        LAST_UPDATE
+                        NUMBER,
+                        LAST_UPDATE,
+                        CREATED_DATE
                     )
                     VALUES
                     (
-                        @graduationId,
+                        @staffCertId,
                         @Code,
                         @Name,
+                        @AlertLevel1,
+                        @AlertLevel2,
                         0,
+                        0,
+                        '0',
                         GETDATE(),
                         GETDATE()
                     )
@@ -57,9 +72,11 @@ namespace Nvtrans
 
             _db.ExecuteNonQuery(
                 sql,
-                new SqlParameter("@graduationId", ToDbValue(graduationId)),
+                new SqlParameter("@staffCertId", ToDbValue(staffCertId)),
                 new SqlParameter("@Code", ToDbValue(code)),
-                new SqlParameter("@Name", ToDbValue(fullName))
+                new SqlParameter("@Name", ToDbValue(fullName)),
+                new SqlParameter("@AlertLevel1", ToDbValue(alertLevel_1)),
+                new SqlParameter("@AlertLevel2", ToDbValue(alertLevel_2))
             );
         }
 
@@ -90,17 +107,17 @@ namespace Nvtrans
     }
 
 
-    public class ImportMasterGraduationApiSevice
+    public class ImportMasterStaffCertService
     {
         private readonly ApiHelper _apiHelper;
         private readonly string _url;
         private readonly int _pageSize;
 
-        public ImportMasterGraduationApiSevice()
+        public ImportMasterStaffCertService()
         {
             _apiHelper = new ApiHelper();
-            _url = "http://nvtrans.lotusshipman.com/C03_Graduation/GetList";
-            _pageSize = 100000;
+            _url = "http://nvtrans.lotusshipman.com/C04_CertificateType/GetList";
+            _pageSize = 1000;
         }
 
         public async Task<List<JObject>> GetAllDataAsync()
@@ -112,11 +129,8 @@ namespace Nvtrans
             while (true)
             {
                 Dictionary<string, string> formData = new Dictionary<string, string>();
-                formData["sort"] = "Code-asc";
                 formData["page"] = page.ToString();
                 formData["pageSize"] = _pageSize.ToString();
-                formData["group"] = "";
-                formData["filter"] = "";
 
                 string json = await _apiHelper.PostFormAsync(_url, formData);
 
