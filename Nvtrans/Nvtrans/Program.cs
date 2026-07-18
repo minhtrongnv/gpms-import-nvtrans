@@ -31,6 +31,7 @@ namespace Nvtrans
             MainMethod.ImportStaffGraduation();
             MainMethod.ImportStaffRelation();
             MainMethod.ImportMasterStaffCert();
+            MainMethod.ImportStaffAppraisalType();
         }
 
         static void Run()
@@ -41,6 +42,8 @@ namespace Nvtrans
             //Main Method
             //MainMethod.ImportStaffInfo();
             //MainMethod.ImportStaffCert();
+            //MainMethod.ImportStaffRelative();
+            MainMethod.ImportStaffAppraisal();
 
 
 

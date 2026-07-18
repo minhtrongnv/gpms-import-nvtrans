@@ -54,7 +54,10 @@
     <Compile Include="ImportMasterPosition.cs" />
     <Compile Include="ImportMasterGraduation.cs" />
     <Compile Include="ImportMasterEducation.cs" />
+    <Compile Include="ImportMasterStaffAppraisalType.cs" />
     <Compile Include="ImportMasterStaffRelation.cs" />
+    <Compile Include="ImportStaffAppraisal.cs" />
+    <Compile Include="ImportStaffRelated.cs" />
     <Compile Include="MainMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

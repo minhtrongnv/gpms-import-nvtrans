@@ -26,6 +26,18 @@ namespace Nvtrans
             }
         }
 
+        public static void ImportStaffRelative()
+        {
+            ImportStaffRelatedApiService staffApiService = new ImportStaffRelatedApiService();
+            List<JObject> result = staffApiService.GetAllDataAsync().GetAwaiter().GetResult();
+        }
+
+        public static void ImportStaffAppraisal()
+        {
+            ImportStaffAppraisalApiService staffApiService = new ImportStaffAppraisalApiService();
+            List<JObject> staffList = staffApiService.GetAllDataAsync().GetAwaiter().GetResult();
+        }
+
         public static void ImportStaffCert()
         {
             ImportStaffCertApiService staffApiService = new ImportStaffCertApiService();
@@ -57,6 +69,13 @@ namespace Nvtrans
         {
             ImportMasterStaffRelation relationApiService = new ImportMasterStaffRelation();
             relationApiService.InsertOrUpdate();
+        }
+
+
+        public static void ImportStaffAppraisalType()
+        {
+            ImportMasterStaffAppraisalType service = new ImportMasterStaffAppraisalType();
+            service.InsertOrUpdate();
         }
 
         public static void ImportStaffBankFields()
