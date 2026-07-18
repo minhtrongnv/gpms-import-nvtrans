@@ -15,12 +15,23 @@ namespace Nvtrans
     public class ImportStaffCert
     {
         private readonly SqlDb _db;
-        private readonly string filePath = ConfigurationManager.AppSettings["StaffCertDirectory"];
-        private readonly string domainUrl = ConfigurationManager.AppSettings["DomainUrl"];
+        private static readonly HttpClient _httpClient = CreateHttpClient();
 
         public ImportStaffCert()
         {
             _db = new SqlDb();
+        }
+
+        private static HttpClient CreateHttpClient()
+        {
+            var handler = new HttpClientHandler
+            {
+                AllowAutoRedirect = true,
+                AutomaticDecompression = System.Net.DecompressionMethods.GZip | System.Net.DecompressionMethods.Deflate
+            };
+            var client = new HttpClient(handler);
+            client.Timeout = TimeSpan.FromMinutes(5);
+            return client;
         }
 
         public static string ParseDateToSqlString(string dateValue)
@@ -52,7 +63,7 @@ namespace Nvtrans
             return date.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
-        public Object IsStaffCertExisting(string staffCertId)
+        public bool IsStaffCertExisting(string staffCertId)
         {
             if (string.IsNullOrWhiteSpace(staffCertId))
                 return false;
@@ -73,37 +84,63 @@ namespace Nvtrans
             return true;
         }
 
-        public static async Task<string> DownloadFileAsync(string fileUrl, string destinationFolder)
+
+        public string GetStaffTechFileName(string staffCertId)
         {
+            if (string.IsNullOrWhiteSpace(staffCertId))
+                return null;
+
+            const string sql = @"
+                SELECT TOP 1 TECH_ATTACHED_FILE
+                FROM dbo.STAFF_CERTIFICATE_REL
+                WHERE ID = @StaffCertId";
+
+            object result = _db.ExecuteScalar(
+                sql,
+                new SqlParameter("@StaffCertId", staffCertId)
+            );
+
+            if (result == null || result == DBNull.Value)
+                return null;
+
+            return result.ToString();
+        }
+
+        public static async Task<bool> DownloadFileAsync(string fileName, string techFileName)
+        {
+            string baseFilePath = ConfigurationManager.AppSettings["StaffCertDirectory"];
+            string domainUrl = ConfigurationManager.AppSettings["DomainUrl"];
+            string fileDomainUrl = new Uri(new Uri(domainUrl), "Attachments/").AbsoluteUri;
+            string fileUrl = new Uri(new Uri(fileDomainUrl), fileName).AbsoluteUri;
+
             if (string.IsNullOrWhiteSpace(fileUrl))
                 throw new ArgumentException("File URL is required.");
 
-            if (!Directory.Exists(destinationFolder))
-                Directory.CreateDirectory(destinationFolder);
+            if (!Directory.Exists(baseFilePath))
+                Directory.CreateDirectory(baseFilePath);
 
-            using (HttpResponseMessage response =
-                   await _httpClient.GetAsync(fileUrl))
+            using (HttpResponseMessage response = await _httpClient.GetAsync(fileUrl))
             {
-                response.EnsureSuccessStatusCode();
+                try
+                {
+                    response.EnsureSuccessStatusCode();
 
-                byte[] fileBytes =
-                    await response.Content.ReadAsByteArrayAsync();
+                    byte[] fileBytes =
+                        await response.Content.ReadAsByteArrayAsync();
 
-                string fileName = GetGuidFileName(fileUrl);
-                string filePath = Path.Combine(destinationFolder, fileName);
+                    string filePath = Path.Combine(baseFilePath, techFileName);
 
-                File.WriteAllBytes(filePath, fileBytes);
+                    File.WriteAllBytes(filePath, fileBytes);
 
-                return filePath;
+                    return true;
+                } 
+                catch(Exception ex)
+                {
+                    Console.WriteLine(fileUrl);
+                    return false;
+                }
             }
         }
-
-        public bool SaveFileFromUrl(string fileName, string techFileName)
-        {
-            bool result = false;
-            return result:
-        }
-
 
         public void InsertOrUpdate(JObject cert)
         {
@@ -130,38 +167,37 @@ namespace Nvtrans
                         WHERE ID = @StaffCertId
                     END
                 ELSE
-                    IF EXISTS (SELECT 1 FROM dbo.STAFF WHERE ID = @StaffId) AND EXISTS (SELECT 1 FROM dbo.CERTIFICATE WHERE ID = @CertId)
-                        BEGIN
-                            INSERT INTO dbo.STAFF_CERTIFICATE_REL
-                            (
-                                ID,
-                                CERT_ID,
-                                STAFF_ID,
-                                DATE_OF_ISSUE,
-                                DATE_EXPIRATION,
-                                CERT_NUMBER,
-                                NOTE,
-                                DELETED,
-                                LAST_UPDATE,
-                                CREATED_DATE,
-                                CREW_WORK_ID
-                            )
-                            VALUES
-                            (
-                                @StaffCertId,
-                                @CertId,
-                                @StaffId,
-                                @IssueDate,
-                                @ExpiredDate,
-                                @CertCode,
-                                @Description,
-                                1,
-                                GETDATE(),
-                                GETDATE(),
-                                0
-                            )
-                        END 
-                    ELSE";
+                IF EXISTS (SELECT 1 FROM dbo.STAFF WHERE ID = @StaffId) AND EXISTS (SELECT 1 FROM dbo.CERTIFICATE WHERE ID = @CertId)
+                    BEGIN
+                        INSERT INTO dbo.STAFF_CERTIFICATE_REL
+                        (
+                            ID,
+                            CERT_ID,
+                            STAFF_ID,
+                            DATE_OF_ISSUE,
+                            DATE_EXPIRATION,
+                            CERT_NUMBER,
+                            NOTE,
+                            DELETED,
+                            LAST_UPDATE,
+                            CREATED_DATE,
+                            CREW_WORK_ID
+                        )
+                        VALUES
+                        (
+                            @StaffCertId,
+                            @CertId,
+                            @StaffId,
+                            @IssueDate,
+                            @ExpiredDate,
+                            @CertCode,
+                            @Description,
+                            0,
+                            GETDATE(),
+                            GETDATE(),
+                            0
+                        )
+                    END";
             _db.ExecuteNonQuery(
                 sql,
                 new SqlParameter("@StaffCertId", ToDbValue(staffCertId)),
@@ -177,12 +213,42 @@ namespace Nvtrans
             {
                 if (IsStaffCertExisting(staffCertId))
                 {
-                    if (SaveFileFromUrl)
+                    string extension = Path.GetExtension(attachFile);
+                    string techFileName = GetStaffTechFileName(staffCertId);
+                    if (string.IsNullOrEmpty(techFileName))
+                    {
+                        techFileName = Guid.NewGuid().ToString("N") + extension;
+                    }
+                    else
+                    {
+                        techFileName = Path.GetFileNameWithoutExtension(techFileName) + extension;
+                    }
+                    if (!string.IsNullOrEmpty(techFileName))
+                    {
+                        bool result = DownloadFileAsync(attachFile, techFileName).GetAwaiter().GetResult();
+                        if (result)
+                        {
+                            string fileUpdateSql = @"
+                                IF EXISTS (SELECT 1 FROM dbo.STAFF_CERTIFICATE_REL WHERE ID = @StaffCertId)
+                                    BEGIN
+                                        UPDATE dbo.STAFF_CERTIFICATE_REL
+                                        SET
+                                            TECH_ATTACHED_FILE = @TechFileName,
+                                            ATTACHED_FILE = @AttachdFile
+                                        WHERE ID = @StaffCertId
+                                    END";
+                            _db.ExecuteNonQuery(
+                               fileUpdateSql,
+                               new SqlParameter("@StaffCertId", ToDbValue(staffCertId)),
+                               new SqlParameter("@AttachdFile", ToDbValue(attachFile)),
+                               new SqlParameter("@TechFileName", ToDbValue(techFileName))
+                           );
+                        }
+                        
+                    }
                 }
             }
         }
-
-
 
         private string GetString(JObject obj, params string[] names)
         {
@@ -220,7 +286,7 @@ namespace Nvtrans
         public ImportStaffCertApiService()
         {
             _apiHelper = new ApiHelper();
-            _url = "http://nvtrans.lotusshipman.com/D04_Employee/GetList";
+            _url = "http://nvtrans.lotusshipman.com/D04_Qualification/GetList";
             _pageSize = 100;
         }
 
