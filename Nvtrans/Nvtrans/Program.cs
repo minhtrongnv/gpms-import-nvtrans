@@ -43,7 +43,8 @@ namespace Nvtrans
             //MainMethod.ImportStaffInfo();
             //MainMethod.ImportStaffCert();
             //MainMethod.ImportStaffRelative();
-            MainMethod.ImportStaffAppraisal();
+            //MainMethod.ImportStaffAppraisal();
+            MainMethod.ImportStaffContract();
 
 
 

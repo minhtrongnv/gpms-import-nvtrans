@@ -84,6 +84,12 @@ namespace Nvtrans
             relationApiService.InsertOrUpdate();
         }
 
+        public static void ImportStaffContract()
+        {
+            ImportStaffContractApiService service = new ImportStaffContractApiService();
+            var staffCertList = service.GetAllDataAsync().GetAwaiter().GetResult();
+        }
+
         public static void ImportMasterStaffCert()
         {
             ImportMasterStaffCertService staffCertApiService = new ImportMasterStaffCertService();
