@@ -40,11 +40,11 @@ namespace Nvtrans
             //ImportMasterData();
 
             //Main Method
-            //MainMethod.ImportStaffInfo();
+            MainMethod.ImportStaffInfo();
             //MainMethod.ImportStaffCert();
             //MainMethod.ImportStaffRelative();
             //MainMethod.ImportStaffAppraisal();
-            MainMethod.ImportStaffContract();
+            //MainMethod.ImportStaffContract();
 
 
 

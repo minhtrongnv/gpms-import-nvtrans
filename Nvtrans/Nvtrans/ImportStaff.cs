@@ -13,10 +13,12 @@ namespace Nvtrans
     public class ImportStaff
     {
         private readonly SqlDb _db;
+        private readonly bool _isTerminated;
 
-        public ImportStaff()
+        public ImportStaff(bool isTerminated = false)
         {
             _db = new SqlDb();
+            _isTerminated = isTerminated;
         }
 
         public static void SplitVietnameseName(
@@ -121,7 +123,11 @@ namespace Nvtrans
             string EmergencyContactAdress = GetString(staff, "EmergencyContactAdress");
             string EmergencyRelationId = GetRelationId(GetString(staff, "EmergencyRelationType"));
             string Note = GetString(staff, "Description");
-
+            string sleepleavedId = null;
+            if (_isTerminated)
+            {
+                status = "Sleep/Leaved";
+            }
             string sql = @"
                 IF EXISTS (SELECT 1 FROM dbo.STAFF WHERE ID = @StaffId)
                 BEGIN
@@ -240,7 +246,8 @@ namespace Nvtrans
                 new SqlParameter("@GraduationId", ToDbValue(graduationId)), 
                 new SqlParameter("@GraduationYear", ToDbValue(graduationYear)),
                 new SqlParameter("@Married", ToDbValue(married.ToString())),
-                new SqlParameter("@HomePhone", ToDbValue(homePhone))
+                new SqlParameter("@HomePhone", ToDbValue(homePhone)),
+                new SqlParameter("@SleepLeavedId", ToDbValue(sleepleavedId))
             );
 
             //Import MoreInfo
@@ -332,10 +339,10 @@ namespace Nvtrans
         private readonly string _url;
         private readonly int _pageSize;
 
-        public ImportStaffApiService()
+        public ImportStaffApiService(bool isTerminated)
         {
             _apiHelper = new ApiHelper();
-            _url = "http://nvtrans.lotusshipman.com/D04_Employee/GetList";
+            _url = isTerminated ? "http://nvtrans.lotusshipman.com/D04_TerminationReport/GetList" : "http://nvtrans.lotusshipman.com/D04_Employee/GetList";
             _pageSize = 100;
         }
 

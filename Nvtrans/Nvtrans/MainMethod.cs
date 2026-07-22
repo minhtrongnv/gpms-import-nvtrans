@@ -13,7 +13,8 @@ namespace Nvtrans
     {
         public static void ImportStaffInfo()
         {
-            ImportStaffApiService staffApiService = new ImportStaffApiService();
+            //Import active staff
+            ImportStaffApiService staffApiService = new ImportStaffApiService(false);
             List<JObject> staffList = staffApiService.GetAllDataAsync().GetAwaiter().GetResult();
             ImportStaff importer = new ImportStaff();
 
@@ -23,6 +24,19 @@ namespace Nvtrans
             {
                 importer.InsertOrUpdate(staff);
                 count++;
+            }
+
+            //Import terminated staff
+            ImportStaffApiService terminated = new ImportStaffApiService(true);
+            List<JObject> terminatedLst = terminated.GetAllDataAsync().GetAwaiter().GetResult();
+            ImportStaff terminatedImporter = new ImportStaff(true);
+
+            int terminatedCount = 0;
+
+            foreach (JObject staff in terminatedLst)
+            {
+                terminatedImporter.InsertOrUpdate(staff);
+                terminatedCount++;
             }
         }
 
