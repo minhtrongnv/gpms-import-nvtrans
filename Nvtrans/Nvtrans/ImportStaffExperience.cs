@@ -66,6 +66,11 @@ namespace Nvtrans
         public string GetPositionId(string positionId, string positionName)
         {
             string POSITION_ID = null;
+            if (string.IsNullOrEmpty(positionId))
+            {
+                return POSITION_ID;
+            }
+
             var positionMapping = new Dictionary<string, string>
             {
                 { "d4b7e531-d064-45c8-acb7-13b0ef6c94e3", "A6F21098-F123-4F47-9D66-9539FD440A49" },
@@ -115,11 +120,12 @@ namespace Nvtrans
             if (string.IsNullOrEmpty(POSITION_ID))
             {
                 const string sql = @"
-                    IF EXISTS (SELECT 1 FROM dbo.POSITION WHERE ID = @PositionId)
-                        BEGIN
-                            
-                        END
-                    ELSE
+                    IF NOT EXISTS
+                    (
+                        SELECT 1
+                        FROM dbo.POSITION
+                        WHERE ID = @PositionId
+                    )
                         BEGIN
                             INSERT INTO dbo.POSITION
                             (
@@ -145,7 +151,7 @@ namespace Nvtrans
                                 0,
                                 0,
                                 GETDATE(),
-                                GETDATE(),
+                                GETDATE()
                             )
                         END";
 
@@ -155,8 +161,6 @@ namespace Nvtrans
                     new SqlParameter("@PositionName", positionName),
                     new SqlParameter("@CompanyId", CompanyId)
                 );
-
-
 
                 if (string.IsNullOrEmpty(POSITION_ID))
                 {
@@ -170,8 +174,8 @@ namespace Nvtrans
                         new SqlParameter("@PositionId", positionId)
                     );
 
-                    if (result == null || result == DBNull.Value)
-                        POSITION_ID = result.ToString();
+                    if (result2 != null && result2 != DBNull.Value)
+                        POSITION_ID = result2.ToString();
                 }
             }
 
@@ -223,9 +227,73 @@ namespace Nvtrans
             return StructureId;
         }
 
-        public string GetDepositionId(string positionId, string shipId)
+        public string GetDepositionId(string positionId, string shipId, string shipName)
         {
-            return "";
+            string DepositionId = null;
+            if (shipId != "00000000-0000-0000-0000-000000000003")
+            {
+                const string sql = @"
+                    IF NOT EXISTS
+                    (
+                        SELECT 1
+                        FROM dbo.DEPT_POSITION
+                        WHERE POS_ID = @PositionId
+                          AND DEPT_ID = @ShipId
+                          AND DELETED = 0
+                    )
+                        BEGIN
+                            INSERT INTO dbo.DEPT_POSITION
+                            (
+                                ID,
+                                DEPT_ID,
+                                POS_ID,
+                                DAY_ON_BOARD,
+                                ALERT_LEVEL1,
+                                ALERT_LEVEL2,
+                                SHIP_NAME,
+                                DELETED,
+                                LAST_UPDATE,
+                                CREATED_DATE
+                            )
+                            VALUES
+                            (
+                                NEWID(),
+                                @ShipId,
+                                @PositionId,
+                                0,
+                                0,
+                                0,
+                                @ShipName,
+                                0,
+                                GETDATE(),
+                                GETDATE()
+                            )
+                        END";
+
+                _db.ExecuteScalar(
+                    sql,
+                    new SqlParameter("@PositionId", positionId),
+                    new SqlParameter("@ShipId", shipId),
+                    new SqlParameter("@ShipName", shipName)
+                );
+
+                const string sql2 = @"
+                    SELECT TOP 1 ID
+                    FROM dbo.DEPT_POSITION
+                    WHERE POS_ID = @PositionId AND DELETED = 0 AND DEPT_ID = @ShipId";
+
+                object result2 = _db.ExecuteScalar(
+                    sql2,
+                    new SqlParameter("@PositionId", positionId),
+                    new SqlParameter("@ShipId", shipId)
+                );
+
+                if (result2 != null && result2 != DBNull.Value)
+                {
+                    DepositionId = result2.ToString();
+                }
+            }
+            return DepositionId;
         }
 
         public string GetShipName(string shipId)
@@ -247,7 +315,7 @@ namespace Nvtrans
                     new SqlParameter("@ShipId", shipId)
                 );
 
-                if (result == null || result == DBNull.Value)
+                if (result != null && result != DBNull.Value)
                     ShipName = result.ToString();
             }
             return ShipName;
@@ -262,8 +330,8 @@ namespace Nvtrans
             string startDate = ParseDateToSqlString(GetString(experience, "DateEffective"));
             string endDate = ParseDateToSqlString(GetString(experience, "DateExpiry"));
             string remark = GetString(experience, "Description");
-            string depositionId = !string.IsNullOrEmpty(positionId) && !string.IsNullOrEmpty(shipId) ? GetDepositionId(positionId, shipId) : null;
             string shipName = !string.IsNullOrEmpty(shipId) ? GetShipName(shipId) : GetString(experience, "OrgStructureName");
+            string depositionId = !string.IsNullOrEmpty(positionId) && !string.IsNullOrEmpty(shipId) ? GetDepositionId(positionId, shipId, shipName) : null;
             string companyName = !string.IsNullOrEmpty(shipId) ? "NVTRANS" : null;
             string sql = @"
                 IF EXISTS (SELECT 1 FROM dbo.CREW_HISTORY WHERE ID = @ExperienceId)
@@ -323,8 +391,8 @@ namespace Nvtrans
                 new SqlParameter("@ExperienceId", ToDbValue(experienceId)),
                 new SqlParameter("@StaffId", ToDbValue(staffId)),
                 new SqlParameter("@ShipId", ToDbValue(shipId)),
-                new SqlParameter("@DateStart", ToDbValue(startDate)),
-                new SqlParameter("@DataEnd", ToDbValue(endDate)),
+                new SqlParameter("@StartDate", ToDbValue(startDate)),
+                new SqlParameter("@EndDate", ToDbValue(endDate)),
                 new SqlParameter("@ShipName", ToDbValue(shipName)),
                 new SqlParameter("@PositionId", ToDbValue(positionId)),
                 new SqlParameter("@CompanyName", ToDbValue(companyName)),
@@ -377,7 +445,7 @@ namespace Nvtrans
         {
             List<JObject> allStaff = new List<JObject>();
 
-            int page = 1;
+            int page = 148;
 
             while (true)
             {
