@@ -27,7 +27,7 @@ namespace Nvtrans
         static void ImportMasterData()
         {
             MainMethod.ImportStaffBankFields();
-            MainMethod.ImportStaffPosition();
+            //MainMethod.ImportStaffPosition();
             MainMethod.ImportStaffGraduation();
             MainMethod.ImportStaffRelation();
             MainMethod.ImportMasterStaffCert();
@@ -40,7 +40,7 @@ namespace Nvtrans
             //ImportMasterData();
 
             //Main Method
-            MainMethod.ImportStaffInfo();
+            //MainMethod.ImportStaffInfo();
             //MainMethod.ImportStaffCert();
             //MainMethod.ImportStaffRelative();
             //MainMethod.ImportStaffAppraisal();

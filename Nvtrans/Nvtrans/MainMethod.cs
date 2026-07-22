@@ -11,6 +11,12 @@ namespace Nvtrans
 {
     public class MainMethod
     {
+        public static void ImportStaffExperience()
+        {
+            ImportStaffExperienceApiService ApiService = new ImportStaffExperienceApiService();
+            List<JObject> experienceLst = ApiService.GetAllDataAsync().GetAwaiter().GetResult();
+        }
+
         public static void ImportStaffInfo()
         {
             //Import active staff
